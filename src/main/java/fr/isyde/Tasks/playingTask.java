@@ -31,6 +31,8 @@ public class playingTask  extends BukkitRunnable {
                 for(Player p : main.getPlayerlistInGame()) {
                     int pick = new Random().nextInt(main.getLocationArena().size());
                     p.teleport(main.getLocationArena().get(pick));
+
+
                     cancel();
 
 

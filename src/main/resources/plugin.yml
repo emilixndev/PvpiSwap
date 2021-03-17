@@ -4,3 +4,8 @@ main: fr.isyde.Main
 api-version: 1.16
 authors: [ iSyde ]
 description: Plugin Pvp
+commands:
+  addspawn:
+    description: Ajoute un spawn pour le PvPiSwap
+  addchest:
+    description: Ajoute un chest pour le PvPiSwap

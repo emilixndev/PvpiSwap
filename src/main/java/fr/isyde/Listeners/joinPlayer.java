@@ -35,13 +35,14 @@ public class joinPlayer implements Listener {
             p.setGameMode(GameMode.ADVENTURE);
             p.getInventory().clear();
             p.setHealth(20);
-            p.setFoodLevel(20);
+            p.setFoodLevel(1000);
+
             p.teleport(new Location(p.getWorld(), -24, 56.5,19));
             p.sendMessage(ChatColor.AQUA+"Bienvenue dans le PvpiSwap \nLa partie va bientôt commencer !!!");
         }
 
 
-        if( main.isState(State.WAITING) && main.getPlayerlistInGame().size()==3){
+        if( main.isState(State.WAITING) && main.getPlayerlistInGame().size()==main.nbjoueur){
 
 
 

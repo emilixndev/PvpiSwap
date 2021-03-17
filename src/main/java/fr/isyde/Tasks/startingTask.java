@@ -2,10 +2,7 @@ package fr.isyde.Tasks;
 
 import fr.isyde.Main;
 import fr.isyde.State;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -40,7 +37,7 @@ public class startingTask  extends BukkitRunnable {
             }
 
 
-            if(timer == 10 || timer == 5 ||timer == 4 ||timer == 3 ||timer == 2 ||timer == 1 ){
+            if(timer == 20 ||timer == 10 || timer == 5 ||timer == 4 ||timer == 3 ||timer == 2 ||timer == 1 ){
 
                 Bukkit.broadcastMessage(ChatColor.GREEN+"Début du jeu dans "+timer+"s");
 
@@ -65,7 +62,8 @@ public class startingTask  extends BukkitRunnable {
                     int pick = new Random().nextInt(main.getLocationArena().size());
                     p.teleport(main.getLocationArena().get(pick));
 
-
+                    p.setFoodLevel(20);
+                    p.setGameMode(GameMode.SURVIVAL);
                     // Donne une Hache
                     p.getInventory().setItemInMainHand(new ItemStack(Material.IRON_AXE));
 

@@ -44,7 +44,7 @@ public class pvpPlayer implements Listener {
 
 
 
-                Bukkit.broadcastMessage(ChatColor.RED+"Le joueur "+victim.getDisplayName()+" à été tué par "+killer.getDisplayName());
+                Bukkit.broadcastMessage(ChatColor.RED+"Le joueur "+victim.getDisplayName()+" a été tué par "+killer.getDisplayName());
 
 
             }
@@ -73,7 +73,7 @@ public class pvpPlayer implements Listener {
 
             p.setGameMode(GameMode.SPECTATOR);
             main.getPlayerlistInGame().remove(p);
-            p.sendMessage(ChatColor.BLUE+ "Tu à perdu");
+            p.sendMessage(ChatColor.BLUE+ "Tu as perdu");
 
             //p.teleport(new Location(p.getWorld(), -24, 56.5,19));
 
@@ -82,13 +82,16 @@ public class pvpPlayer implements Listener {
                 main.setState(State.FINISH);
 
                 Bukkit.broadcastMessage(ChatColor.AQUA+"===============================");
-                Bukkit.broadcastMessage(ChatColor.AQUA+"Le vainqueur est u"+main.getPlayerlistInGame().get(0).getDisplayName());
+                Bukkit.broadcastMessage(ChatColor.AQUA+"Le vainqueur est "+main.getPlayerlistInGame().get(0).getDisplayName());
                 Bukkit.broadcastMessage(ChatColor.AQUA+"===============================");
 
 
             }
 
         }
+
+
+
 
 
     }
